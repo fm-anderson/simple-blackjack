@@ -74,7 +74,7 @@ export default function GameScreen({ deckId }) {
   const handleWin = async () => {
     await jsConfetti.addConfetti({
       emojis: ['🏆', '🤑', '🎉', '🥇', '💰'],
-      emojiSize: 40,
+      emojiSize: 90,
     });
   };
 
