@@ -1,0 +1,26 @@
+// hooks
+import useAxios from 'axios-hooks';
+
+// components
+import Navbar from './components/Navbar';
+import Game from './components/Game';
+
+function App() {
+  const [{ data, loading, error }] = useAxios(
+    'https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1'
+  );
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
+  const deckId = data.deck_id;
+
+  return (
+    <main>
+      <Navbar />
+      <div className="grid place-items-center min-h-full bg-gradient-to-b from-slate-300 to-slate-100 dark:from-slate-800 dark:to-slate-900 text-slate-900 dark:text-slate-200">
+        <Game deckId={deckId} />
+      </div>
+    </main>
+  );
+}
+
+export default App;
