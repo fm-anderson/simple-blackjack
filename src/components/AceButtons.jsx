@@ -2,20 +2,20 @@ import React from 'react';
 
 export default function AceButtons({ aceAddsOne, aceAddsEleven }) {
   return (
-    <div className="shadow-lg rounded-lg p-4 bg-stone-200 dark:bg-gray-800 my-4">
-      <div className="w-full h-full text-center">
+    <div className="my-4 rounded-lg bg-stone-200 p-4 shadow-lg dark:bg-gray-800">
+      <div className="h-full w-full text-center">
         <div className="flex h-full flex-col justify-between">
-          <div className="flex items-center justify-between gap-4 w-full">
+          <div className="flex w-full items-center justify-between gap-4">
             <button
               type="button"
-              className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md"
+              className="w-full rounded-md bg-indigo-600 py-2 px-4 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-indigo-200"
               onClick={aceAddsOne}
             >
               1
             </button>
             <button
               type="button"
-              className="py-2 px-4 bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500 focus:ring-offset-indigo-200 text-white w-full transition ease-in duration-200 text-center text-base font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 rounded-md"
+              className="w-full rounded-md bg-indigo-600 py-2 px-4 text-center text-base font-semibold text-white shadow-md transition duration-200 ease-in hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-indigo-200"
               onClick={aceAddsEleven}
             >
               11

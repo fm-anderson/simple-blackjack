@@ -15,9 +15,9 @@ const jsConfetti = new JSConfetti();
 
 export default function GameScreen({ deckId }) {
   const [count, setCount] = useState(0);
-  const [showCard, setShowCard] = useState(false);
   const [currentCard, setCurrentCard] = useState(null);
   const [isAce, setIsAce] = useState(false);
+  const [allCards, setAllCards] = useState([]);
 
   const { isLoading, error, data, refetch } = useQuery(
     ['newCard'],
@@ -32,9 +32,9 @@ export default function GameScreen({ deckId }) {
 
   const handleNewCard = async () => {
     await refetch();
-    setShowCard(true);
     setCurrentCard(data);
     updateCount(data);
+    setAllCards((prevState) => [...prevState, data.cards[0].image]);
   };
 
   const updateCount = () => {
@@ -86,11 +86,11 @@ export default function GameScreen({ deckId }) {
   checkCount();
 
   return (
-    <div className='className="justify evenly m-4 flex flex-col place-items-center items-center gap-7 md:flex-row"'>
+    <div className='justify evenly md:flex-row" m-4 flex flex-col place-items-center items-center gap-7'>
       <div className="justify evenly flex flex-col md:flex-row">
         <div>
           <Count count={count} />
-          <Card count={count} currentCard={currentCard} showCard={showCard} />
+          <Card count={count} currentCard={currentCard} allCards={allCards} />
           {!isAce && (
             <GameButtons
               count={count}
