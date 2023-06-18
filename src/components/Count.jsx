@@ -13,7 +13,7 @@ export default function Count({ count }) {
             transition: { duration: 0.8 },
           }}
         >
-          <h1 className="py-2 text-center text-8xl font-semibold opacity-70">
+          <h1 className="py-2 text-center text-6xl font-semibold opacity-70">
             {count}
           </h1>
         </motion.div>
@@ -23,7 +23,7 @@ export default function Count({ count }) {
             count > 21 ? 'bg-red-400' : 'bg-stone-200'
           } mb-4 rounded-lg shadow-md`}
         >
-          <h1 className="py-2 text-center text-8xl font-semibold opacity-70">
+          <h1 className="py-2 text-center text-6xl font-semibold opacity-70">
             {count}
           </h1>
         </div>
