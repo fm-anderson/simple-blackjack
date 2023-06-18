@@ -14,12 +14,12 @@ function App() {
   const deckId = data.deck_id;
 
   return (
-    <main>
+    <>
       <Navbar />
-      <div className="grid min-h-full place-items-center bg-gradient-to-b from-slate-300 to-slate-100 text-slate-900 dark:from-slate-800 dark:to-slate-900 dark:text-slate-200">
+      <main className="grid min-h-full place-items-center bg-gradient-to-b from-slate-300 to-slate-100 text-slate-900 dark:from-slate-800 dark:to-slate-900 dark:text-slate-200">
         <Game deckId={deckId} />
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 
